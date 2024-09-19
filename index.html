@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="shortcut icon" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/query.css">
+  <script defer src="./script.js"></script>
+  <title>Age Calculator</title>
+</head>
+<body>
+  <container class="main">
+      <div class="input-part">
+        <form class="day">
+          <p class="title">DAY</p>
+          <input type="number" class="input day-input" placeholder="DD">
+          <p class="error-message hidden">*Empty Field</p>
+        </form>
+        <form class="month">
+          <p class="title">MONTH</p>
+          <input type="number" class="input month-input" placeholder="MM">
+          <p class="error-message hidden">*Empty Field</p>
+        </form>
+        <form calss="year">
+          <p class="title">YEAR</p>
+          <input type="number" class="input year-input" placeholder="YYYY">
+          <p class="error-message hidden">*Empty Field</p>
+        </form>
+      </div>
+      <div class="to-flex">
+        <hr class="line">
+        <button class="insert-btn"><svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg></button>
+      </div>
+    <div class="result-part">
+      <p class="main-result-text"><span class="result-text year-text">--</span>years</p>
+      <p class="main-result-text"><span class="result-text month-text">--</span>months</p>
+      <p class="main-result-text"><span class="result-text day-text">--</span>days</p>
+    </div>
+  </container>
+</body>
+</html>

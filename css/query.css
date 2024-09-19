@@ -1,0 +1,26 @@
+@media(max-width:40rem){
+    html{
+        font-size: 45%;
+    }
+}
+
+@media(max-width: 28rem){
+    html{
+        font-size: 35%;
+    }
+
+    .result-part{
+        margin: 0;
+    }
+
+    .insert-btn{
+        display: block;
+        margin-right: 6rem;
+    }
+
+    .line{
+        display: inline-block;
+        width: 80%;
+        overflow: visible;
+    }
+}
