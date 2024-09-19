@@ -2,25 +2,27 @@
     html{
         font-size: 45%;
     }
+
+    .insert-btn{
+        position: absolute;
+    }
+
+    .input{
+        margin-bottom: 3.2rem;
+    }
+
+    .result-part{
+        margin-top: 48px;
+        margin-bottom: 0;
+    }
+
+    .line{
+        position: relative;
+    }
 }
 
 @media(max-width: 28rem){
     html{
         font-size: 35%;
-    }
-
-    .result-part{
-        margin: 0;
-    }
-
-    .insert-btn{
-        display: block;
-        margin-right: 6rem;
-    }
-
-    .line{
-        display: inline-block;
-        width: 80%;
-        overflow: visible;
     }
 }

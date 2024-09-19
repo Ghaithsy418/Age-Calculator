@@ -63,7 +63,12 @@ const checkInput = function(){
             check = true;
         }
     })
-    if((Number(dayInput.value) > 29 && Number(monthInput.value) === 2)) {
+    if(Number(dayInput.value) > 29 && Number(monthInput.value) === 2) {
+        errorWrong(dayInput);
+        check = true;
+    }
+
+    if(Number(dayInput.value) > 28 && (Number(yearInput.value) % 4) !== 0){
         errorWrong(dayInput);
         check = true;
     }
@@ -121,9 +126,20 @@ const calculateAge = function(day,month,year){
     dayText.textContent = `${newDay}`;
 }
 
+const startCalculating = function(e){
+    e.preventDefault();
+    checkInput();
+    checkError();
+    dayInput.value = monthInput.value = yearInput.value = '';
+    dayInput.focus();
+}
+
 //#################################################### Functions ###################################################
 
-insertBtn.addEventListener("click",function(e){
-    e.preventDefault();
-    checkError();
+dayInput.focus();
+
+insertBtn.addEventListener("click",startCalculating);
+
+document.addEventListener("keydown",function(e){
+    if(e.key === "Enter") startCalculating(e);
 });
