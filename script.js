@@ -1,10 +1,9 @@
 'use strict';
 
 const currentDate = new Date();
-const currentDay = currentDate.getDate();
-let currentMonth = currentDate.getMonth();
-currentMonth++;
-const currentYear = currentDate.getFullYear();
+let currentDay;
+let currentMonth;
+let currentYear;
 //########################################################
 const insertBtn = document.querySelector(".insert-btn");
 const resultText = document.querySelectorAll(".result-text");
@@ -15,6 +14,9 @@ const errorMessage = document.querySelectorAll(".error-message");
 const yearText = document.querySelector(".year-text");
 const monthText = document.querySelector(".month-text");
 const dayText = document.querySelector(".day-text");
+const daysTextContent = document.querySelector(".days");
+const monthsTextContent = document.querySelector(".months");
+const yearsTextContent = document.querySelector(".years");
 //########################################################
 
 const months = [1,3,5,7,8,10,12];
@@ -124,9 +126,17 @@ const calculateAge = function(day,month,year){
     yearText.textContent = `${newYear}`;
     monthText.textContent = `${newMonth}`;
     dayText.textContent = `${newDay}`;
+    console.log(newDay,newMonth,newYear);
+    newDay === '01' || newDay === '00'? daysTextContent.textContent = "day" : daysTextContent.textContent = "days";
+    newMonth === '01' || newMonth === '00'? monthsTextContent.textContent = "month" : monthsTextContent.textContent = "months";
+    newYear === '01' || newYear === '00'? yearsTextContent.textContent = "year" : yearsTextContent.textContent = "years";
 }
 
 const startCalculating = function(e){
+    currentDay = currentDate.getDate();
+    currentMonth = currentDate.getMonth();
+    currentMonth++;
+    currentYear = currentDate.getFullYear();
     e.preventDefault();
     checkInput();
     checkError();
